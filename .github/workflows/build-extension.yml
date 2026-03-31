@@ -20,7 +20,7 @@ jobs:
       - id: build-and-push-extension
         shell: bash
         run: |
-          pack extension package ghcr.io/example-scope/buildpack-extension:latest \
+          pack extension package ghcr.io/evo-jwueppin/buildpack-extension:latest \
           --publish \
           --path ./rsync-extension \
           --format image \
