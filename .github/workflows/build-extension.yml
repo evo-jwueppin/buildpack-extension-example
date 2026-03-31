@@ -25,6 +25,10 @@ jobs:
           --path ./rsync-extension \
           --format image \
           --target "linux/amd64"
+  build-buildpack-image-with-extension:
+    needs: build-buildpack-extension-image
+    runs-on: ubuntu-latest
+    steps:
       - id: build-and-push-image
         shell: bash
         run: |
