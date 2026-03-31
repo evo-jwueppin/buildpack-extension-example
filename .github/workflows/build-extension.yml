@@ -7,6 +7,9 @@ on:
 jobs:
   build-buildpack-extension-image:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v6
       - id: setup-pack
@@ -28,6 +31,9 @@ jobs:
   build-buildpack-image-with-extension:
     needs: build-buildpack-extension-image
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - id: build-and-push-image
         shell: bash
