@@ -35,6 +35,7 @@ jobs:
       contents: read
       packages: write
     steps:
+      - uses: actions/checkout@v6
       - id: setup-pack
         uses: buildpacks/github-actions/setup-pack@v5.11.0
         with:
