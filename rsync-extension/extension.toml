@@ -1,0 +1,10 @@
+# Buildpack API version
+api = "0.12"
+
+# Extension ID and metadata
+[extension]
+id = "example-scope/buildpack-image-with-extension"
+version = "1.0.0"
+name = "Rsync Extension"
+homepage = "https://github.com/evo-jwueppin/buildpack-extension-example"
+description = "A simple extension that installs rsync on the runtime base image"
