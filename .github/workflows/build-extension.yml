@@ -47,11 +47,6 @@ jobs:
         shell: bash
         run: |
           pack build ghcr.io/evo-jwueppin/buildpack-image-with-extension:latest \
-          --volume ~/.m2:/platform/bindings/maven \
-          --env "GITHUB_ACTOR=${{ github.actor }}" \
-          --env "GITHUB_TOKEN=${{ github.token }}" \
-          --env "BP_MAVEN_BUILT_ARTIFACT=target/*.jar" \
-          --env "BPE_DEFAULT_LANG=en_US.utf8" \
           --extension ghcr.io/evo-jwueppin/buildpack-extension:latest \
           -B paketobuildpacks/builder-jammy-base:latest \
           --verbose \
