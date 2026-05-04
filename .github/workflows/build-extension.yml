@@ -55,6 +55,8 @@ jobs:
       - id: build-and-push-image
         shell: bash
         run: |
+          docker image pull paketobuildpacks/run-jammy-base:latest
+          
           pack build ghcr.io/evo-jwueppin/buildpack-image-with-extension:latest \
           --extension ghcr.io/evo-jwueppin/buildpack-extension:latest \
           -B paketobuildpacks/builder-jammy-base:latest \
