@@ -61,5 +61,4 @@ jobs:
           --extension ghcr.io/evo-jwueppin/buildpack-extension:latest \
           -B paketobuildpacks/builder-jammy-base:latest \
           --verbose \
-          --clear-cache \
           --publish
