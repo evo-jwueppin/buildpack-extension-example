@@ -55,8 +55,7 @@ jobs:
       - id: build-and-push-image
         shell: bash
         run: |
-          RUN_IMAGE_DIGEST=$(docker manifest inspect paketobuildpacks/run-jammy-base:latest \\
-            | jq -r '.manifests[] | select(.platform.os=="linux" and .platform.architecture=="amd64") | .digest')
+          RUN_IMAGE_DIGEST=$(docker manifest inspect paketobuildpacks/run-jammy-base:latest | jq -r '.manifests[] | select(.platform.os=="linux" and .platform.architecture=="amd64") | .digest')
         
           docker image pull paketobuildpacks/run-jammy-base@${RUN_IMAGE_DIGEST}
           
